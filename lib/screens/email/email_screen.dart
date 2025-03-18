@@ -8,10 +8,7 @@ import '../../constants.dart';
 import 'components/header.dart';
 
 class EmailScreen extends StatelessWidget {
-  const EmailScreen({
-    Key? key,
-    this.email,
-  }) : super(key: key);
+  const EmailScreen({Key? key, this.email}) : super(key: key);
 
   final Email? email;
 
@@ -51,25 +48,29 @@ class EmailScreen extends StatelessWidget {
                                       Text.rich(
                                         TextSpan(
                                           text: emails[1].name,
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .labelLarge,
+                                          style:
+                                              Theme.of(
+                                                context,
+                                              ).textTheme.labelLarge,
                                           children: [
                                             TextSpan(
-                                                text:
-                                                    "  <elvia.atkins@gmail.com> to Jerry Torp",
-                                                style: Theme.of(context)
-                                                    .textTheme
-                                                    .bodySmall),
+                                              text:
+                                                  "  <elvia.atkins@gmail.com> to Jerry Torp",
+                                              style:
+                                                  Theme.of(
+                                                    context,
+                                                  ).textTheme.bodySmall,
+                                            ),
                                           ],
                                         ),
                                       ),
                                       Text(
                                         "Inspiration for our new home",
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .titleLarge,
-                                      )
+                                        style:
+                                            Theme.of(
+                                              context,
+                                            ).textTheme.titleLarge,
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -82,96 +83,118 @@ class EmailScreen extends StatelessWidget {
                             ),
                             SizedBox(height: kDefaultPadding),
                             LayoutBuilder(
-                              builder: (context, constraints) => SizedBox(
-                                width: constraints.maxWidth > 850
-                                    ? 800
-                                    : constraints.maxWidth,
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      "Hello my love, \n \nSunt architecto voluptatum esse tempora sint nihil minus incidunt nisi. Perspiciatis natus quo unde magnam numquam pariatur amet ut. Perspiciatis ab totam. Ut labore maxime provident. Voluptate ea omnis et ipsum asperiores laborum repellat explicabo fuga. Dolore voluptatem praesentium quis eos laborum dolores cupiditate nemo labore. \n \nLove you, \n\nElvia",
-                                      style: TextStyle(
-                                        height: 1.5,
-                                        color: Color(0xFF4D5875),
-                                        fontWeight: FontWeight.w300,
-                                      ),
-                                    ),
-                                    SizedBox(height: kDefaultPadding),
-                                    Row(
+                              builder:
+                                  (context, constraints) => SizedBox(
+                                    width:
+                                        constraints.maxWidth > 850
+                                            ? 800
+                                            : constraints.maxWidth,
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          "6 attachments",
-                                          style: TextStyle(fontSize: 12),
+                                          "Hello my love, \n \nSunt architecto voluptatum esse tempora sint nihil minus incidunt nisi. Perspiciatis natus quo unde magnam numquam pariatur amet ut. Perspiciatis ab totam. Ut labore maxime provident. Voluptate ea omnis et ipsum asperiores laborum repellat explicabo fuga. Dolore voluptatem praesentium quis eos laborum dolores cupiditate nemo labore. \n \nLove you, \n\nElvia",
+                                          style: TextStyle(
+                                            height: 1.5,
+                                            color: Color(0xFF4D5875),
+                                            fontWeight: FontWeight.w300,
+                                          ),
                                         ),
-                                        Spacer(),
-                                        // Text(
-                                        //   "Download All",
-                                        //   style: Theme.of(context)
-                                        //       .textTheme
-                                        //       .bodySmall,
-                                        // ),
-                                        TextWidget(
-                                          'Download All',
-                                          fontSize: 16,
-                                          color: Colors.blue,
-                                          weight: FontWeight.w500,
+                                        SizedBox(height: kDefaultPadding),
+                                        Row(
+                                          children: [
+                                            Text(
+                                              "6 attachments",
+                                              style: TextStyle(fontSize: 12),
+                                            ),
+                                            Spacer(),
+                                            // Text(
+                                            //   "Download All",
+                                            //   style: Theme.of(context)
+                                            //       .textTheme
+                                            //       .bodySmall,
+                                            // ),
+                                            TextWidget(
+                                              'Download All',
+                                              fontSize: 16,
+                                              color: Colors.blue,
+                                              weight: FontWeight.w500,
+                                            ),
+                                            SizedBox(
+                                              width: kDefaultPadding / 4,
+                                            ),
+                                            WebsafeSvg.asset(
+                                              "assets/Icons/Download.svg",
+                                              height: 16,
+                                            ),
+                                          ],
                                         ),
-                                        SizedBox(width: kDefaultPadding / 4),
-                                        WebsafeSvg.asset(
-                                          "assets/Icons/Download.svg",
-                                          height: 16,
+                                        Divider(thickness: 1),
+                                        SizedBox(height: kDefaultPadding / 2),
+                                        // SizedBox(
+                                        //   height: 200,
+                                        //   child: StaggeredGridView.countBuilder(
+                                        //     physics: NeverScrollableScrollPhysics(),
+                                        //     crossAxisCount: 4,
+                                        //     itemCount: 3,
+                                        //     itemBuilder:
+                                        //         (BuildContext context, int index) =>
+                                        //             ClipRRect(
+                                        //       borderRadius:
+                                        //           BorderRadius.circular(8),
+                                        //       child: Image.asset(
+                                        //         "assets/images/Img_$index.png",
+                                        //         fit: BoxFit.cover,
+                                        //       ),
+                                        //     ),
+                                        //     // staggeredTileBuilder: (int index) =>
+                                        //     //     StaggeredTile.count(
+                                        //     //   2,
+                                        //     //   index.isOdd ? 2 : 1,
+                                        //     // ),
+                                        //     mainAxisSpacing: kDefaultPadding,
+                                        //     crossAxisSpacing: kDefaultPadding,
+                                        //   ),
+                                        // )
+                                        SizedBox(
+                                          height: 500,
+                                          child: MasonryGridView.count(
+                                            crossAxisCount: 4,
+                                            mainAxisSpacing: 4,
+                                            crossAxisSpacing: 4,
+                                            itemCount: 3,
+                                            itemBuilder: (
+                                              BuildContext context,
+                                              int index,
+                                            ) {
+                                              return ClipRRect(
+                                                borderRadius:
+                                                    BorderRadius.circular(8),
+                                                child: Image.asset(
+                                                  "assets/logo/Img_$index.png",
+                                                  fit: BoxFit.cover,
+                                                ),
+                                              );
+                                            },
+                                            // (
+                                            //   BuildContext context,
+                                            //   int index
+                                            // )  =>
+
+                                            // ClipRRect(
+                                            //   borderRadius:
+                                            //       BorderRadius.circular(8),
+                                            //   child: Image.asset(
+                                            //     "assets/logo/Img_$index.png",
+                                            //     fit: BoxFit.cover,
+                                            //   ),
+                                            // ),
+                                          ),
                                         ),
                                       ],
                                     ),
-                                    Divider(thickness: 1),
-                                    SizedBox(height: kDefaultPadding / 2),
-                                    // SizedBox(
-                                    //   height: 200,
-                                    //   child: StaggeredGridView.countBuilder(
-                                    //     physics: NeverScrollableScrollPhysics(),
-                                    //     crossAxisCount: 4,
-                                    //     itemCount: 3,
-                                    //     itemBuilder:
-                                    //         (BuildContext context, int index) =>
-                                    //             ClipRRect(
-                                    //       borderRadius:
-                                    //           BorderRadius.circular(8),
-                                    //       child: Image.asset(
-                                    //         "assets/images/Img_$index.png",
-                                    //         fit: BoxFit.cover,
-                                    //       ),
-                                    //     ),
-                                    //     // staggeredTileBuilder: (int index) =>
-                                    //     //     StaggeredTile.count(
-                                    //     //   2,
-                                    //     //   index.isOdd ? 2 : 1,
-                                    //     // ),
-                                    //     mainAxisSpacing: kDefaultPadding,
-                                    //     crossAxisSpacing: kDefaultPadding,
-                                    //   ),
-                                    // )
-                                    SizedBox(
-                                       height: 200,
-                                      child: MasonryGridView.count(
-                                        crossAxisCount: 4,
-                                        mainAxisSpacing: 4,
-                                        crossAxisSpacing: 4,
-                                             itemBuilder:
-                                              (BuildContext context, int index) =>
-                                                  ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(8),
-                                            child: Image.asset(
-                                              "assets/Images/Img_$index.png",
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ),
+                                  ),
                             ),
                           ],
                         ),
@@ -179,7 +202,7 @@ class EmailScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),
