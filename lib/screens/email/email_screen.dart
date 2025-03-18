@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:web_email/components/text_widget.dart';
 import 'package:web_email/models/Email.dart';
 import 'package:websafe_svg/websafe_svg.dart';
 
@@ -103,17 +105,22 @@ class EmailScreen extends StatelessWidget {
                                           style: TextStyle(fontSize: 12),
                                         ),
                                         Spacer(),
-                                        Text(
-                                          "Download All",
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .bodySmall,
+                                        // Text(
+                                        //   "Download All",
+                                        //   style: Theme.of(context)
+                                        //       .textTheme
+                                        //       .bodySmall,
+                                        // ),
+                                        TextWidget(
+                                          'Download All',
+                                          fontSize: 16,
+                                          color: Colors.blue,
+                                          weight: FontWeight.w500,
                                         ),
                                         SizedBox(width: kDefaultPadding / 4),
                                         WebsafeSvg.asset(
                                           "assets/Icons/Download.svg",
                                           height: 16,
-                                          // color: kGrayColor,
                                         ),
                                       ],
                                     ),
@@ -144,6 +151,24 @@ class EmailScreen extends StatelessWidget {
                                     //     crossAxisSpacing: kDefaultPadding,
                                     //   ),
                                     // )
+                                    SizedBox(
+                                       height: 200,
+                                      child: MasonryGridView.count(
+                                        crossAxisCount: 4,
+                                        mainAxisSpacing: 4,
+                                        crossAxisSpacing: 4,
+                                             itemBuilder:
+                                              (BuildContext context, int index) =>
+                                                  ClipRRect(
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                            child: Image.asset(
+                                              "assets/Images/Img_$index.png",
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                      ),
+                                    )
                                   ],
                                 ),
                               ),

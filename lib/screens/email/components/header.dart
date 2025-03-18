@@ -18,9 +18,11 @@ class Header extends StatelessWidget {
           // We need this back button on mobile only
           if (Responsive.isMobile(context)) BackButton(),
           IconButton(
+            color:Colors.red,
             icon: WebsafeSvg.asset(
               "assets/Icons/Trash.svg",
               width: 24,
+              
             ),
             onPressed: () {},
           ),

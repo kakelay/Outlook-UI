@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:web_email/responsive.dart';
-import 'package:websafe_svg/websafe_svg.dart';
-
 import '../constants.dart';
-import '../extensions.dart';
 import 'side_menu_item.dart';
 import 'tags.dart';
 
