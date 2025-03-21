@@ -16,7 +16,8 @@ class EmailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Colors.white,
+        // color: Colors.white,
+        color: Theme.of(context).scaffoldBackgroundColor, // Adapt to theme
         child: SafeArea(
           child: Column(
             children: [

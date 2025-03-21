@@ -12,9 +12,7 @@ import 'package:flutter/foundation.dart' show kIsWeb;
 
 class ListOfEmails extends StatefulWidget {
   // Press "Command + ."
-  const ListOfEmails({
-    Key? key,
-  }) : super(key: key);
+  const ListOfEmails({Key? key}) : super(key: key);
 
   @override
   _ListOfEmailsState createState() => _ListOfEmailsState();
@@ -32,15 +30,17 @@ class _ListOfEmailsState extends State<ListOfEmails> {
       ),
       body: Container(
         padding: EdgeInsets.only(top: kIsWeb ? kDefaultPadding : 0),
-        color: kBgDarkColor,
+        // color: kBgDarkColor,
+        color: Theme.of(context).scaffoldBackgroundColor, // Adapt to theme
         child: SafeArea(
           right: false,
           child: Column(
             children: [
               // This is our Seearch bar
               Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: kDefaultPadding,
+                ),
                 child: Row(
                   children: [
                     // Once user click the menu icon the menu shows like drawer
@@ -62,7 +62,8 @@ class _ListOfEmailsState extends State<ListOfEmails> {
                           filled: true,
                           suffixIcon: Padding(
                             padding: const EdgeInsets.all(
-                                kDefaultPadding * 0.75), //15
+                              kDefaultPadding * 0.75,
+                            ), //15
                             child: WebsafeSvg.asset(
                               "assets/Icons/Search.svg",
                               width: 24,
@@ -80,15 +81,16 @@ class _ListOfEmailsState extends State<ListOfEmails> {
               ),
               SizedBox(height: kDefaultPadding),
               Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: kDefaultPadding,
+                ),
                 child: Row(
                   children: [
                     WebsafeSvg.asset(
                       "assets/Icons/Angle down.svg",
                       width: 16,
+
                       // color: Colors.black,
-                      
                     ),
                     SizedBox(width: 5),
                     Text(
@@ -112,19 +114,22 @@ class _ListOfEmailsState extends State<ListOfEmails> {
                 child: ListView.builder(
                   itemCount: emails.length,
                   // On mobile this active dosen't mean anything
-                  itemBuilder: (context, index) => EmailCard(
-                    isActive: Responsive.isMobile(context) ? false : index == 0,
-                    email: emails[index],
-                    press: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) =>
-                              EmailScreen(email: emails[index]),
-                        ),
-                      );
-                    },
-                  ),
+                  itemBuilder:
+                      (context, index) => EmailCard(
+                        isActive:
+                            Responsive.isMobile(context) ? false : index == 0,
+                        email: emails[index],
+                        press: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder:
+                                  (context) =>
+                                      EmailScreen(email: emails[index]),
+                            ),
+                          );
+                        },
+                      ),
                 ),
               ),
             ],

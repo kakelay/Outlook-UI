@@ -7,16 +7,15 @@ import 'tags.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 
 class SideMenu extends StatelessWidget {
-    SideMenu({
-    Key? key,
-  }) : super(key: key);
+  SideMenu({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: double.infinity,
       padding: EdgeInsets.only(top: kIsWeb ? kDefaultPadding : 0),
-      color: kBgLightColor,
+      // color: kBgLightColor,
+      color: Theme.of(context).scaffoldBackgroundColor, // Adapt to theme
       child: SafeArea(
         child: SingleChildScrollView(
           padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
@@ -24,31 +23,30 @@ class SideMenu extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Image.asset(
-                    "assets/images/Logo Outlook.png",
-                    width: 46,
-                  ),
+                  Image.asset("assets/images/Logo Outlook.png", width: 46),
                   Spacer(),
                   // We don't want to show this close button on Desktop mood
                   if (!Responsive.isDesktop(context)) CloseButton(),
                 ],
               ),
               SizedBox(height: kDefaultPadding),
-              TextButton(onPressed: () {
-                
-              }, child:  Text(
+              TextButton(
+                onPressed: () {},
+                child: Text(
                   "New message",
                   style: TextStyle(color: Colors.white),
-                ),),
-              
+                ),
+              ),
+
               SizedBox(height: kDefaultPadding),
 
-              TextButton(onPressed: () {
-                
-              }, child:  Text(
+              TextButton(
+                onPressed: () {},
+                child: Text(
                   "Get messages",
                   style: TextStyle(color: Colors.white),
-                ),),
+                ),
+              ),
               // FlatButton.icon(
               //   minWidth: double.infinity,
               //   padding: EdgeInsets.symmetric(
@@ -82,14 +80,14 @@ class SideMenu extends StatelessWidget {
                 isActive: false,
               ),
               SideMenuItem(
-                  itemCount: 1,
+                itemCount: 1,
                 press: () {},
                 title: "Drafts",
                 iconSrc: "assets/Icons/File.svg",
                 isActive: false,
               ),
               SideMenuItem(
-                  itemCount: 1,
+                itemCount: 1,
                 press: () {},
                 title: "Deleted",
                 iconSrc: "assets/Icons/Trash.svg",
