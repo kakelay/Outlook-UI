@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:gap/gap.dart';
 import 'package:web_email/components/text_widget.dart';
 import 'package:web_email/models/Email.dart';
 import 'package:websafe_svg/websafe_svg.dart';
@@ -132,32 +133,9 @@ class EmailScreen extends StatelessWidget {
                                           ],
                                         ),
                                         Divider(thickness: 1),
-                                        SizedBox(height: kDefaultPadding / 2),
-                                        // SizedBox(
-                                        //   height: 200,
-                                        //   child: StaggeredGridView.countBuilder(
-                                        //     physics: NeverScrollableScrollPhysics(),
-                                        //     crossAxisCount: 4,
-                                        //     itemCount: 3,
-                                        //     itemBuilder:
-                                        //         (BuildContext context, int index) =>
-                                        //             ClipRRect(
-                                        //       borderRadius:
-                                        //           BorderRadius.circular(8),
-                                        //       child: Image.asset(
-                                        //         "assets/images/Img_$index.png",
-                                        //         fit: BoxFit.cover,
-                                        //       ),
-                                        //     ),
-                                        //     // staggeredTileBuilder: (int index) =>
-                                        //     //     StaggeredTile.count(
-                                        //     //   2,
-                                        //     //   index.isOdd ? 2 : 1,
-                                        //     // ),
-                                        //     mainAxisSpacing: kDefaultPadding,
-                                        //     crossAxisSpacing: kDefaultPadding,
-                                        //   ),
-                                        // )
+
+                                        Gap(kDefaultPadding / 2),
+
                                         SizedBox(
                                           height: 500,
                                           child: MasonryGridView.count(
@@ -178,19 +156,6 @@ class EmailScreen extends StatelessWidget {
                                                 ),
                                               );
                                             },
-                                            // (
-                                            //   BuildContext context,
-                                            //   int index
-                                            // )  =>
-
-                                            // ClipRRect(
-                                            //   borderRadius:
-                                            //       BorderRadius.circular(8),
-                                            //   child: Image.asset(
-                                            //     "assets/logo/Img_$index.png",
-                                            //     fit: BoxFit.cover,
-                                            //   ),
-                                            // ),
                                           ),
                                         ),
                                       ],

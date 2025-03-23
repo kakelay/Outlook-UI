@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:web_email/components/side_menu.dart';
 import 'package:web_email/models/Email.dart';
 import 'package:web_email/responsive.dart';
@@ -86,13 +87,8 @@ class _ListOfEmailsState extends State<ListOfEmails> {
                 ),
                 child: Row(
                   children: [
-                    WebsafeSvg.asset(
-                      "assets/Icons/Angle down.svg",
-                      width: 16,
-
-                      // color: Colors.black,
-                    ),
-                    SizedBox(width: 5),
+                    WebsafeSvg.asset("assets/Icons/Angle down.svg", width: 16),
+                    Gap(5),
                     Text(
                       "Sort by date",
                       style: TextStyle(fontWeight: FontWeight.w500),
@@ -123,9 +119,9 @@ class _ListOfEmailsState extends State<ListOfEmails> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder:
-                                  (context) =>
-                                      EmailScreen(email: emails[index]),
+                              builder: (context) {
+                                return EmailScreen(email: emails[index]);
+                              },
                             ),
                           );
                         },
