@@ -59,7 +59,12 @@ class _ListOfEmailsState extends State<ListOfEmails> {
                         onChanged: (value) {},
                         decoration: InputDecoration(
                           hintText: "Search",
-                          fillColor: kBgLightColor,
+                          fillColor:
+                              Theme.of(context).brightness == Brightness.dark
+                                  ? Colors
+                                      .grey[800] // Dark mode: Slightly dark grey
+                                  : Colors.grey[200], // Light mode: Light grey
+
                           filled: true,
                           suffixIcon: Padding(
                             padding: const EdgeInsets.all(

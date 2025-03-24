@@ -14,7 +14,6 @@ class SideMenu extends StatelessWidget {
     return Container(
       height: double.infinity,
       padding: EdgeInsets.only(top: kIsWeb ? kDefaultPadding : 0),
-      // color: kBgLightColor,
       color: Theme.of(context).scaffoldBackgroundColor, // Adapt to theme
       child: SafeArea(
         child: SingleChildScrollView(
@@ -25,45 +24,61 @@ class SideMenu extends StatelessWidget {
                 children: [
                   Image.asset("assets/images/Logo Outlook.png", width: 46),
                   Spacer(),
-                  // We don't want to show this close button on Desktop mood
                   if (!Responsive.isDesktop(context)) CloseButton(),
                 ],
               ),
               SizedBox(height: kDefaultPadding),
-              TextButton(
-                onPressed: () {},
-                child: Text(
-                  "New message",
-                  style: TextStyle(color: Colors.white),
+
+              // Outlook-style New Message Button
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Color(0xFF0078D4), // Outlook Blue
+                  foregroundColor: Colors.white, // Text color
+                  padding: EdgeInsets.symmetric(vertical: 14, horizontal: 24),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(6),
+                  ),
+                ),
+                onPressed: () {
+                  print("New message button clicked");
+                },
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.create, size: 18, color: Colors.white),
+                    SizedBox(width: 8),
+                    Text("New message", style: TextStyle(fontSize: 16)),
+                  ],
                 ),
               ),
 
               SizedBox(height: kDefaultPadding),
 
-              TextButton(
-                onPressed: () {},
-                child: Text(
-                  "Get messages",
-                  style: TextStyle(color: Colors.white),
+              // Outlook-style Get Messages Button
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Color(0xFF005A9E), // Lighter Blue Shade
+                  foregroundColor: Colors.white,
+                  padding: EdgeInsets.symmetric(vertical: 14, horizontal: 24),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(6),
+                  ),
+                ),
+                onPressed: () {
+                  print("Get messages button clicked");
+                },
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.refresh, size: 18, color: Colors.white),
+                    SizedBox(width: 8),
+                    Text("Get messages", style: TextStyle(fontSize: 16)),
+                  ],
                 ),
               ),
-              // FlatButton.icon(
-              //   minWidth: double.infinity,
-              //   padding: EdgeInsets.symmetric(
-              //     vertical: kDefaultPadding,
-              //   ),
-              //   shape: RoundedRectangleBorder(
-              //     borderRadius: BorderRadius.circular(10),
-              //   ),
-              //   color: kBgDarkColor,
-              //   onPressed: () {},
-              //   icon: WebsafeSvg.asset("assets/Icons/Download.svg", width: 16),
-              //   label: Text(
-              //     "Get messages",
-              //     style: TextStyle(color: kTextColor),
-              //   ),
-              // ).addNeumorphism(),
+
               SizedBox(height: kDefaultPadding * 2),
+
               // Menu Items
               SideMenuItem(
                 press: () {},
@@ -96,6 +111,7 @@ class SideMenu extends StatelessWidget {
               ),
 
               SizedBox(height: kDefaultPadding * 2),
+
               // Tags
               Tags(),
             ],

@@ -30,7 +30,9 @@ class EmailCard extends StatelessWidget {
               decoration: BoxDecoration(
                 color:
                     isActive
-                        ? (isDarkMode ? Colors.blueGrey[700] : Colors.blue[500])
+                        ? (isDarkMode
+                            ? Colors.blueGrey[700]
+                            : Color(0xFF0078D4))
                         : theme.cardColor,
                 borderRadius: BorderRadius.circular(15),
               ),
@@ -117,7 +119,7 @@ class EmailCard extends StatelessWidget {
               offset: const Offset(5, 5),
               topShadowColor: isDarkMode ? Colors.black38 : Colors.white60,
               bottomShadowColor:
-                  isDarkMode ? Colors.black54 : Colors.blue.withOpacity(0.15),
+                  isDarkMode ? Colors.black54 : Color(0xFF005A9E),
             ),
             if (!email!.isChecked!)
               Positioned(
