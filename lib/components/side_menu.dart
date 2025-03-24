@@ -102,7 +102,7 @@ class SideMenu extends StatelessWidget {
                 isActive: false,
               ),
               SideMenuItem(
-                itemCount: 1,
+                itemCount: 5,
                 press: () {},
                 title: "Deleted",
                 iconSrc: "assets/Icons/Trash.svg",

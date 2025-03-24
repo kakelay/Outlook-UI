@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
-
-import '../constants.dart';
 import '../extensions.dart';
 
 class CounterBadge extends StatelessWidget {
-    CounterBadge({
-    Key? key,
-    required this.count,
-  }) : super(key: key);
+  CounterBadge({Key? key, required this.count}) : super(key: key);
 
   final int count;
 
@@ -16,13 +11,15 @@ class CounterBadge extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 8, vertical: 2),
       decoration: BoxDecoration(
-          color: kBadgeColor, borderRadius: BorderRadius.circular(9)),
+        color: Colors.blueAccent,
+        borderRadius: BorderRadius.circular(9),
+      ),
       child: Text(
         count.toString(),
-        // style: Theme.of(context).textTheme.caption.copyWith(
-        //       fontWeight: FontWeight.w500,
-        //       color: Colors.white,
-        //     ),
+        style: Theme.of(context).textTheme.bodySmall?.copyWith(
+          fontWeight: FontWeight.w500,
+          color: Colors.white,
+        ),
       ),
     ).addNeumorphism(
       offset: Offset(4, 4),

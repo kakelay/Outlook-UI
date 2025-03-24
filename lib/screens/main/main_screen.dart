@@ -15,7 +15,7 @@ class MainScreen extends StatelessWidget {
     Size _size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: Text('Web Email'),
+        title: Text('OutLook'),
         actions: [
           IconButton(
             icon: Icon(
@@ -29,7 +29,6 @@ class MainScreen extends StatelessWidget {
       ),
       body: Responsive(
         // Let's work on our mobile part
-      
         mobile: ListOfEmails(),
         tablet: Row(
           children: [

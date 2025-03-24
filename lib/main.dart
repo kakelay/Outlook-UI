@@ -15,7 +15,8 @@ class _MyAppState extends State<MyApp> {
 
   void toggleTheme() {
     setState(() {
-      _themeMode = _themeMode == ThemeMode.light ? ThemeMode.dark : ThemeMode.light;
+      _themeMode =
+          _themeMode == ThemeMode.light ? ThemeMode.dark : ThemeMode.light;
     });
   }
 
@@ -23,7 +24,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Web Email',
+      // title: 'OutLook',
       theme: ThemeData(
         brightness: Brightness.light,
         primarySwatch: Colors.blue,
@@ -35,7 +36,9 @@ class _MyAppState extends State<MyApp> {
         cardColor: Colors.white,
         textTheme: TextTheme(
           bodyLarge: TextStyle(color: Colors.black87), // Updated from bodyText1
-          bodyMedium: TextStyle(color: Colors.black54), // Updated from bodyText2
+          bodyMedium: TextStyle(
+            color: Colors.black54,
+          ), // Updated from bodyText2
         ),
       ),
       darkTheme: ThemeData(
@@ -49,7 +52,9 @@ class _MyAppState extends State<MyApp> {
         cardColor: Color(0xFF292929), // Slightly lighter gray for cards
         textTheme: TextTheme(
           bodyLarge: TextStyle(color: Colors.white70), // Updated from bodyText1
-          bodyMedium: TextStyle(color: Colors.white60), // Updated from bodyText2
+          bodyMedium: TextStyle(
+            color: Colors.white60,
+          ), // Updated from bodyText2
         ),
       ),
       themeMode: _themeMode, // Switch between light and dark mode

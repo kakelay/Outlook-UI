@@ -9,7 +9,6 @@ class SideMenuItem extends StatelessWidget {
     Key? key,
     required this.isActive,
     this.isHover = false,
-     
     required this.itemCount,
     this.showBorder = true,
     required this.iconSrc,
@@ -50,15 +49,20 @@ class SideMenuItem extends StatelessWidget {
                     WebsafeSvg.asset(
                       iconSrc,
                       height: 20,
-                      // Color: (isActive || isHover) ? kPrimaryColor : kGrayColor,
+                      colorFilter: ColorFilter.mode(
+                        (isActive || isHover) ? kPrimaryColor : kGrayColor,
+                        BlendMode.srcIn,
+                      ),
                     ),
                     SizedBox(width: kDefaultPadding * 0.75),
                     Text(
                       title,
-                      // style: Theme.of(context).textTheme.button.copyWith(
-                      //       color:
-                      //           (isActive || isHover) ? kTextColor : kGrayColor,
-                      //     ),
+                      style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                        color:
+                            (isActive || isHover)
+                                ? kTextColor
+                                : kGrayColor, // Change text color based on active/hover state
+                      ),
                     ),
                     Spacer(),
                     if (itemCount != null) CounterBadge(count: itemCount!),
