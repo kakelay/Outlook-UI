@@ -33,136 +33,90 @@ List<Email> emails = List.generate(
 
 List demo_data = [
   {
-    "name": "សៀមរាប",
+    "name": "Carhartt",
     "image": "assets/images/user_1.png",
-    "subject": "អាយហ្វូន ១២ មានរួចហើយ",
+    "subject": "New Workwear Collection Available",
     "isAttachmentAvailable": false,
     "isChecked": true,
     "tagColor": null,
-    "time": "ឥឡូវនេះ",
+    "time": "Now",
   },
   {
-    "name": "សុភមង្គល",
+    "name": "Uniqlo",
     "image": "assets/images/user_2.png",
-    "subject": "ការចំរាញ់បំផុសគំនិតសម្រាប់ផ្ទះថ្មី",
+    "subject": "Fresh Minimalist Styles for Summer",
     "isAttachmentAvailable": true,
     "isChecked": false,
     "tagColor": null,
     "time": "15:32",
   },
   {
-    "name": "វិសាល",
+    "name": "Dickies",
     "image": "assets/images/user_3.png",
-    "subject": "អាជីវកម្មធំមួយកំពុងបង្កើនអំណាចពិភពលោក",
+    "subject": "Durable Workwear at Great Prices",
     "isAttachmentAvailable": true,
     "isChecked": false,
     "tagColor": null,
     "time": "14:27",
   },
   {
-    "name": "សុធារ៉ា",
+    "name": "Hollister",
     "image": "assets/images/user_4.png",
-    "subject": "វិធីលឿនបំផុតក្នុងការរចនា",
+    "subject": "Casual Beachwear Just Arrived",
     "isAttachmentAvailable": false,
     "isChecked": true,
     "tagColor": Color(0xFF23CF91),
     "time": "10:43",
   },
   {
-    "name": "សម្បត្តិ",
+    "name": "Nike",
     "image": "assets/images/user_5.png",
-    "subject": "ឱកាសការងារថ្មីៗ",
+    "subject": "Exclusive Sneakers & Sportswear",
     "isAttachmentAvailable": false,
     "isChecked": true,
     "tagColor": Color(0xFF3A6FF7),
     "time": "9:58",
   },
-
   {
-    "name": "សុភា",
+    "name": "Adidas",
     "image": "assets/images/user_5.png",
-    "subject": "ឱកាសការងារថ្មីៗ",
+    "subject": "New Performance Gear in Stock",
     "isAttachmentAvailable": false,
     "isChecked": false,
     "tagColor": Color(0xFF3A6FF7),
     "time": "9:58",
   },
   {
-    "name": "វិមាន",
+    "name": "The North Face",
     "image": "assets/images/user_5.png",
-    "subject": "ឱកាសការងារថ្មីៗ",
+    "subject": "Outdoor Essentials for Every Adventure",
     "isAttachmentAvailable": false,
     "isChecked": false,
     "tagColor": Color(0xFF3A6FF7),
     "time": "9:58",
   },
   {
-    "name": "ចន្ថា",
+    "name": "Levi’s",
     "image": "assets/images/user_5.png",
-    "subject": "ឱកាសការងារថ្មីៗ",
+    "subject": "Classic Denim, Timeless Style",
     "isAttachmentAvailable": false,
     "isChecked": false,
     "tagColor": Color(0xFF3A6FF7),
     "time": "9:58",
   },
   {
-    "name": "វិចិត្រ",
+    "name": "Patagonia",
     "image": "assets/images/user_5.png",
-    "subject": "ឱកាសការងារថ្មីៗ",
+    "subject": "Sustainable Fashion for Every Season",
     "isAttachmentAvailable": false,
     "isChecked": false,
     "tagColor": Color(0xFF3A6FF7),
     "time": "9:58",
   },
   {
-    "name": "អេមលី",
+    "name": "Supreme",
     "image": "assets/images/user_5.png",
-    "subject": "ឱកាសការងារថ្មីៗ",
-    "isAttachmentAvailable": false,
-    "isChecked": false,
-    "tagColor": Color(0xFF3A6FF7),
-    "time": "9:58",
-  },
-  {
-    "name": "ពិសី",
-    "image": "assets/images/user_5.png",
-    "subject": "ឱកាសការងារថ្មីៗ",
-    "isAttachmentAvailable": false,
-    "isChecked": false,
-    "tagColor": Color(0xFF3A6FF7),
-    "time": "9:58",
-  },
-  {
-    "name": "រតនា",
-    "image": "assets/images/user_5.png",
-    "subject": "ឱកាសការងារថ្មីៗ",
-    "isAttachmentAvailable": false,
-    "isChecked": false,
-    "tagColor": Color(0xFF3A6FF7),
-    "time": "9:58",
-  },
-  {
-    "name": "សុវណ្ណ",
-    "image": "assets/images/user_5.png",
-    "subject": "ឱកាសការងារថ្មីៗ",
-    "isAttachmentAvailable": false,
-    "isChecked": false,
-    "tagColor": Color(0xFF3A6FF7),
-    "time": "9:58",
-  },
-  {
-    "name": "វិសាល",
-    "image": "assets/images/user_5.png",
-    "subject": "ឱកាសការងារថ្មីៗ",
-    "isAttachmentAvailable": false,
-    "isChecked": false,
-    "tagColor": Color(0xFF3A6FF7),
-    "time": "9:58",
-  },
-  {
-    "name": "អីណា",
-    "image": "assets/images/user_5.png",
-    "subject": "ឱកាសការងារថ្មីៗ",
+    "subject": "Limited Edition Drops - Don’t Miss Out",
     "isAttachmentAvailable": false,
     "isChecked": false,
     "tagColor": Color(0xFF3A6FF7),
@@ -171,4 +125,13 @@ List demo_data = [
 ];
 
 String emailDemoText =
-    "Corporis illo provident. Sunt omnis neque et aperiam. Nemo ut dolorum fugit eum sed. Corporis illo provident. Sunt omnis neque et aperiam. Nemo ut dolorum fugit eum sed. Corporis illo provident. Sunt omnis neque et aperiam. Nemo ut dolorum fugit eum sed";
+    "Hey there,"
+    "We’ve got some exciting new arrivals that you don’t want to miss! "
+    "From durable workwear to everyday essentials, check out our latest collection featuring Carhartt, Uniqlo, Dickies, and Hollister.\n\n"
+    "🔥 Carhartt – Tough, long-lasting jackets and pants built for work and adventure.\n"
+    "👕 Uniqlo – Minimalist essentials with comfort and style for any occasion.\n"
+    "👖 Dickies – Classic workwear with a street-style edge, perfect for every day.\n"
+    "🧥 Hollister – Casual wear that’s all about comfort and laid-back vibes.\n\n"
+    "Upgrade your wardrobe today with pieces that fit your lifestyle. Don’t miss out on our exclusive discounts and limited-edition drops!\n\n"
+    "Shop now and stay ahead of the trends!\n\n"
+    "Best,\nThe Fashion Team";

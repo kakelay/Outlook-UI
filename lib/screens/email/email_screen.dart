@@ -57,7 +57,7 @@ class EmailScreen extends StatelessWidget {
                                           children: [
                                             TextSpan(
                                               text:
-                                                  "  <elvia.atkins@gmail.com> to Jerry Torp",
+                                                  "  <kakelay18052002@gmail.com> Kak Elay",
                                               style:
                                                   Theme.of(
                                                     context,
@@ -96,7 +96,7 @@ class EmailScreen extends StatelessWidget {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          "Hello my love, \n \nSunt architecto voluptatum esse tempora sint nihil minus incidunt nisi. Perspiciatis natus quo unde magnam numquam pariatur amet ut. Perspiciatis ab totam. Ut labore maxime provident. Voluptate ea omnis et ipsum asperiores laborum repellat explicabo fuga. Dolore voluptatem praesentium quis eos laborum dolores cupiditate nemo labore. \n \nLove you, \n\nElvia",
+                                          emailDemoText,
                                           style: TextStyle(
                                             height: 1.5,
                                             color: Color(0xFF4D5875),
@@ -111,12 +111,7 @@ class EmailScreen extends StatelessWidget {
                                               style: TextStyle(fontSize: 12),
                                             ),
                                             Spacer(),
-                                            // Text(
-                                            //   "Download All",
-                                            //   style: Theme.of(context)
-                                            //       .textTheme
-                                            //       .bodySmall,
-                                            // ),
+
                                             TextWidget(
                                               'Download All',
                                               fontSize: 16,
@@ -142,7 +137,7 @@ class EmailScreen extends StatelessWidget {
                                             crossAxisCount: 4,
                                             mainAxisSpacing: 4,
                                             crossAxisSpacing: 4,
-                                            itemCount: 3,
+                                            itemCount: 4,
                                             itemBuilder: (
                                               BuildContext context,
                                               int index,
